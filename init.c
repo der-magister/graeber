@@ -16,7 +16,7 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@skywave-2000.de
+//   Kontakt: projekte@kabelmail.net
 
 #include "init.h"
 #include "player.h"
@@ -28,10 +28,6 @@
 #include "daten/gfx/tiles.h"
 #include "daten/lvldaten/l1.h"
 #include "daten/intro-3.h"
-
-UINT8 v_timer;
-UINT8 v_lvl;
-UINT8 v_aktion;
 
 void p_init () NONBANKED
 {

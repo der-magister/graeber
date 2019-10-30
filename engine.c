@@ -16,14 +16,10 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@skywave-2000.de
+//   Kontakt: projekte@kabelmail.net
 
 #include "engine.h"
 #include "gegner.h"
-
-unsigned char v_lvldat [241];
-unsigned char v_tile [1];
-UINT8 v_i;
 
 void p_engine_drawMap (unsigned char *lvldat) NONBANKED
 {

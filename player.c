@@ -16,29 +16,13 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@skywave-2000.de
+//   Kontakt: projekte@kabelmail.net
 
 #pragma bank=1
 
 #include "player.h"
 #include "engine.h"
 #include "items.h"
-
-INT8 v_slp;
-INT8 v_smlp;
-UINT8 v_sxk;
-UINT8 v_syk;
-UINT8 v_smk;
-UINT8 v_sri;
-UINT8 v_sangriff;
-UINT8 v_smxk;
-UINT8 v_smyk;
-UINT8 v_sgo;
-UINT8 v_smgo;
-UINT8 v_shalt;
-UINT8 v_smhalt;
-UINT8 v_sschlaege;
-UINT8 v_edelstein;
 
 void p_player_init () BANKED
 {

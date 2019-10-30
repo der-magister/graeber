@@ -16,30 +16,13 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@skywave-2000.de
+//   Kontakt: projekte@kabelmail.net
 
 #pragma bank=2
 
 #include "player.h"
 #include "gegner.h"
 #include "hud.h"
-
-UINT8 v_gxk [6];        //Koordinate X
-UINT8 v_gyk [6];        //Koordinate Y
-UINT8 v_gflag [6];      //Flag 1 - horizontale, 2 - vertikale Bewegung, 0 - nicht aktiv
-INT8 v_glp [6];         //Lebenspunkte 
-UINT8 v_gtp [6];        //Gegnertrefferpunkte
-UINT8 v_gmk [6];        //Koordinate auf Map
-UINT8 v_gri [6];        //Bewegungsrichtung
-UINT8 v_gftile [6];
-UINT8 v_gltile [6];
-UINT8 v_trefferlooptime;
-UINT8 v_gegnerlooptime;
-UINT8 v_kampf;
-volatile UINT8 v_j;
-UINT8 v_mg;             //maximale Gegner
-UINT8 v_stref;
-UINT8 v_gspeed;
 
 ///horizontale Bewegungsroutine Gegner
 void p_gegner_move_horizontal () BANKED

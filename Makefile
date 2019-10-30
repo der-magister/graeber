@@ -2,8 +2,8 @@ SRC = daten/gfx/sprites.c daten/gfx/tiles.c daten/lvldaten/l1.c daten/lvldaten/l
 
 BIN = graber.gb
 
-SIZE=medium
-#SIZE=small
+#SIZE=medium
+SIZE=small
 
 GBDK_Home=c:\\apps\\gbdk
 
@@ -17,17 +17,17 @@ CC = $(GBDK_Home)\\bin\\sdcc -mgbz80 --asm=rgbds -I $(GBDK_Home)\\include -I $(G
 all: $(BIN)
 
 clean:
-	rm $(OBJ)
-	rm *.asm
-	rm daten/gfx/*.asm
-	rm *.map
-	rm *.sym
+	del $(OBJ)
+	del *.asm
+	del daten/gfx/*.asm
+	del *.map
+	del *.sym
 
 %.o: %.s
 
 $(BIN): $(OBJ)
 	$(CC) $(CRT0) $(OBJ) $(LIB)
-	mv a.gb $(BIN)
+	move a.gb $(BIN)
 	rgbfix -p -v -tgraber $(BIN) 
 	
 $(LIB): $(LIBOBJ)
