@@ -1,5 +1,5 @@
 # graeber
-A small gameboy game
+A small gameboy game like digger
 
 Develop for the ZFX Action XVI (https://zfx.info/viewtopic.php?f=49&t=4485) in 2018.
 
