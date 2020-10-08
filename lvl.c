@@ -20,6 +20,7 @@
 
 #include "lvl.h"
 #include "engine.h"
+
 #include "player.h"
 #include "gegner.h"
 
@@ -32,6 +33,7 @@
 #include "daten/lvldaten/l8.h"
 #include "daten/lvldaten/l9.h"
 #include "daten/lvldaten/l10.h"
+
 
 void p_lvl1 () NONBANKED
 {
@@ -100,7 +102,7 @@ void p_lvl6 () NONBANKED
     p_engine_changeLvl (7, l7);
     p_player_setSprite (72, 96, 8, 10);
 
-    v_mg = 2; v_gspeed = 20;
+    v_mg = 2; v_gspeed = 30;
     p_gegner_set (1, 6, 5, 112, 96, MOVE_STACHEL, MOVE_UP, 125, 2);
     p_gegner_set (2, 6, 5, 72, 32, MOVE_STACHEL, MOVE_UP, 125, 2);
   }

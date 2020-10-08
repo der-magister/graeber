@@ -21,6 +21,6 @@
 #ifndef _HUDGUI_H_
 #define _HUDGUI_H_
 
-extern unsigned char hudgui[];
+extern const unsigned char hudgui[];
 
 #endif

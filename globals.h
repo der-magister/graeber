@@ -21,8 +21,8 @@
 #ifndef _GLOBALS_H_
 #define _GLOBALS_H_
 
-#include "c:\\apps\\gbdk\\include\\asm\\gbz80\\types.h"
-#include "c:\\apps\\gbdk\\include\\gb\\gb.h"
+#include "/opt/gbdk/include/asm/gbz80/types.h"
+#include "/opt/gbdk/include/gb/gb.h"
 
 #define FALSE 0
 #define TRUE 1
@@ -101,15 +101,15 @@ extern UINT8 v_i;
 extern UINT8 v_lvl;
 extern UINT8 v_aktion;
 
-extern UINT8 v_gxk [4];        //Koordinate X
-extern UINT8 v_gyk [4];        //Koordinate Y
-extern UINT8 v_gflag [4];      //Flag 1 - horizontale, 2 - vertikale Bewegung, 0 - nicht aktiv
-extern INT8 v_glp [4];         //Lebenspunkte 
-extern UINT8 v_gtp [4];        //Gegnertrefferpunkte
-extern UINT8 v_gmk [4];        //Koordinate auf Map
-extern UINT8 v_gri [4];        //Bewegungsrichtung
-extern UINT8 v_gftile [4];
-extern UINT8 v_gltile [4];
+extern UINT8 v_gxk [6];        //Koordinate X
+extern UINT8 v_gyk [6];        //Koordinate Y
+extern UINT8 v_gflag [6];      //Flag 1 - horizontale, 2 - vertikale Bewegung, 0 - nicht aktiv
+extern INT8 v_glp [6];         //Lebenspunkte 
+extern UINT8 v_gtp [6];        //Gegnertrefferpunkte
+extern UINT8 v_gmk [6];        //Koordinate auf Map
+extern UINT8 v_gri [6];        //Bewegungsrichtung
+extern UINT8 v_gftile [6];
+extern UINT8 v_gltile [6];
 extern UINT8 v_trefferlooptime;
 extern UINT8 v_gegnerlooptime;
 extern UINT8 v_kampf;

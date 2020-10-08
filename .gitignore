@@ -1,0 +1,9 @@
+obj/
+graeber.gb
+*.o
+*.asm
+*.lst
+*.sym
+*.map
+*.swp
+

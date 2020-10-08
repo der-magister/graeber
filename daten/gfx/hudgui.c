@@ -18,7 +18,7 @@
 //
 //   Kontakt: magister@skywave-2000.de
 
-#pragma bank=1
+//#pragma bank=1
 
 const unsigned char hudgui[] =
 {

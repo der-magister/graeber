@@ -18,7 +18,7 @@
 //
 //   Kontakt: projekte@kabelmail.net
 
-#pragma bank=2
+//#pragma bank=2
 
 #include "player.h"
 #include "gegner.h"
@@ -220,7 +220,7 @@ void p_gegner_kolision () BANKED
                   (v_lvldat [v_smk - 20] != 7) &&
                   (v_lvldat [v_smk - 20] != 3)) 
           {
-            p_player_setSprite (v_sxk, v_syk - 8);
+            p_player_setSprite (v_sxk, v_syk - 8, v_smxk, v_smyk - 1);
           }
           else if ((v_lvldat [v_smk + 20] != 6) &&
                   (v_lvldat [v_smk + 20] != 2) &&
@@ -256,7 +256,7 @@ void p_gegner_kolision () BANKED
                   (v_lvldat [v_smk + 20] != 7) &&
                   (v_lvldat [v_smk + 20] != 3))
           {
-            p_player_setSprite (v_sxk, v_syk + 8);
+            p_player_setSprite (v_sxk, v_syk + 8, v_smxk, v_smyk + 1);
           }
         }
     }

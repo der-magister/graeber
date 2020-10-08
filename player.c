@@ -18,7 +18,7 @@
 //
 //   Kontakt: projekte@kabelmail.net
 
-#pragma bank=1
+//#pragma bank=1
 
 #include "player.h"
 #include "engine.h"

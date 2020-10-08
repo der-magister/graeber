@@ -22,6 +22,6 @@
 #ifndef _SPRITES_H_
 #define _SPRITES_H_
 
-extern unsigned char sprites[];
+extern const unsigned char sprites[];
 
 #endif

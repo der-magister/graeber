@@ -21,6 +21,6 @@
 #ifndef _TILES_H_
 #define _TILES_H_
 
-extern unsigned char tiles[];
+extern const unsigned char tiles[];
 
 #endif
