@@ -1,6 +1,6 @@
-//   Graber
+//   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -23,15 +23,15 @@
 
 #include "globals.h"
 
-void p_hud_umwandlung (UINT8 v_wert, UINT8 mxk, UINT8 myk) BANKED;
-void p_hud_init () BANKED;
-void p_hud_showLP () BANKED;
-void p_hud_showMLP () BANKED;
-void p_hud_showGO () BANKED;
-void p_hud_show () BANKED;
-void p_hud_showTimer () BANKED;
-void p_hud_showhalt () BANKED;
-void p_hud_showmhalt () BANKED;
-void p_hud_showXYK () BANKED;
+void p_hud_umwandlung (UINT8 v_wert, UINT8 mxk, UINT8 myk) __banked;
+void p_hud_init (void) __banked;
+void p_hud_showLP (void) __banked;
+void p_hud_showMLP (void) __banked;
+void p_hud_showGO (void) __banked;
+void p_hud_show (void) __banked;
+void p_hud_showTimer (void) __banked;
+void p_hud_showhalt (void) __banked;
+void p_hud_showmhalt (void) __banked;
+void p_hud_showXYK (void) __banked;
 
 #endif

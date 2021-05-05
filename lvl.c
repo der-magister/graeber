@@ -1,6 +1,6 @@
-//   Graber
+//   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -24,120 +24,110 @@
 #include "player.h"
 #include "gegner.h"
 
-#include "daten/lvldaten/l2.h"
-#include "daten/lvldaten/l3.h"
-#include "daten/lvldaten/l4.h"
-#include "daten/lvldaten/l5.h"
-#include "daten/lvldaten/l6.h"
-#include "daten/lvldaten/l7.h"
-#include "daten/lvldaten/l8.h"
-#include "daten/lvldaten/l9.h"
-#include "daten/lvldaten/l10.h"
+#include "daten/lvldaten/lvldat.h"
 
-
-void p_lvl1 () NONBANKED
+///Ablauf Raum 1
+void p_lvl1 (void) __nonbanked
 {
-  if ((v_sxk == 152) && (v_syk == 64))
-  {
-    p_engine_changeLvl (2, l2);
-    p_player_setSprite (16, 64, 1, 6);
+        if ((v_sxk == 152) && (v_syk == 64)) {
+                p_engine_changeLvl (2, l2);
+                p_player_setSprite (16, 64, 1, 6);
 
-    v_mg = 1; v_gspeed = 30;
-    p_gegner_set (1, 2, 3, 104, 88, MOVE_HORIZONT, MOVE_WEST, 1, 1);
-  }
+                v_mg = 1; v_gspeed = 30;
+                p_gegner_set (1, 2, 3, 104, 88, MOVE_HORIZONT, MOVE_WEST, 1, 1);
+        }
 }
 
-void p_lvl2 () NONBANKED
+///Ablauf Raum 2
+void p_lvl2 (void) __nonbanked
 {
-  if ((v_sxk == 88) && (v_syk == 96))
-  {
-    p_engine_changeLvl (3, l3);
-    p_player_setSprite (88, 24, 10, 1);
+        if ((v_sxk == 88) && (v_syk == 96)) {
+                p_engine_changeLvl (3, l3);
+                p_player_setSprite (88, 24, 10, 1);
 
-    v_mg = 1; v_gspeed = 30;
-    p_gegner_set (1, 4, 4, 72, 96, MOVE_HORIZONT, MOVE_EAST, 125, 2);
-  }
+                v_mg = 1;
+                p_gegner_set (1, 4, 4, 72, 96, MOVE_HORIZONT, MOVE_EAST, 125, 2);
+        }
 }
 
-void p_lvl3 () NONBANKED
+///Ablauf Raum 3
+void p_lvl3 (void) __nonbanked
 {
-  if ((v_sxk == 88) && (v_syk == 96))
-  {
-    p_engine_changeLvl (4, l4);
-    p_player_setSprite (88, 24, 10, 1);
+        if ((v_sxk == 88) && (v_syk == 96)) {
+                p_engine_changeLvl (4, l4);
+                p_player_setSprite (88, 24, 10, 1);
 
-    v_mg = 2; v_gspeed = 15;
-    p_gegner_set (1, 4 , 4, 96, 48, MOVE_HORIZONT, MOVE_WEST, 125, 2);
-    p_gegner_set (2, 4 , 4, 64, 64, MOVE_HORIZONT, MOVE_EAST, 125, 2);
-  }
+                v_mg = 2; v_gspeed = 20;
+                p_gegner_set (1, 4 , 4, 96, 48, MOVE_HORIZONT, MOVE_WEST, 125, 2);
+                p_gegner_set (2, 4 , 4, 64, 64, MOVE_HORIZONT, MOVE_EAST, 125, 2);
+        }
 }
 
-void p_lvl4 () NONBANKED
+///Ablauf Raum 4
+void p_lvl4 (void) __nonbanked
 {
-  if ((v_sxk == 80) && (v_syk == 56))
-  {
-    p_engine_changeLvl (5, l5);
-    p_player_setSprite (80, 56, 9, 5);
+        if ((v_sxk == 80) && (v_syk == 56)) {
+                p_engine_changeLvl (5, l5);
+                p_player_setSprite (80, 56, 9, 5);
 
-    v_mg = 2; v_gspeed = 25;
-    p_gegner_set (1, 2, 3, 128, 64, MOVE_HORIZONT, MOVE_EAST, 1, 1);
-    p_gegner_set (2, 4, 4, 16, 96, MOVE_VERTICAL, MOVE_NORTH, 125, 2);
-  }
+                v_mg = 2; v_gspeed = 25;
+                p_gegner_set (1, 2, 3, 128, 64, MOVE_HORIZONT, MOVE_EAST, 1, 1);
+                p_gegner_set (2, 4, 4, 16, 96, MOVE_VERTICAL, MOVE_NORTH, 125, 2);
+        }
 }
 
-void p_lvl5 () NONBANKED
+///Ablauf Raum 5
+void p_lvl5 (void) __nonbanked
 {
-  if ((v_sxk == 16) && (v_syk == 56))
-  {
-    p_engine_changeLvl (6, l6);
-    p_player_setSprite (16, 56, 1, 5);
-
-  }
+        if ((v_sxk == 16) && (v_syk == 56)) {
+                p_engine_changeLvl (6, l6);
+                p_player_setSprite (16, 56, 1, 5);
+        }
 }
 
-void p_lvl6 () NONBANKED
+///Ablauf Raum 6
+void p_lvl6 (void) __nonbanked
 {
-  if ((v_sxk == 72) && (v_syk == 96))
-  {
-    p_engine_changeLvl (7, l7);
-    p_player_setSprite (72, 96, 8, 10);
+        if ((v_sxk == 72) && (v_syk == 96)) {
+                p_engine_changeLvl (7, l7);
+                p_player_setSprite (72, 96, 8, 10);
 
-    v_mg = 2; v_gspeed = 30;
-    p_gegner_set (1, 6, 5, 112, 96, MOVE_STACHEL, MOVE_UP, 125, 2);
-    p_gegner_set (2, 6, 5, 72, 32, MOVE_STACHEL, MOVE_UP, 125, 2);
-  }
+                v_mg = 2; v_gspeed = 35;
+                p_gegner_set (1, 6, 5, 112, 96, MOVE_STACHEL, MOVE_UP, 125, 2);
+                p_gegner_set (2, 6, 5, 72, 32, MOVE_STACHEL, MOVE_UP, 125, 2);
+        }
 }
 
-void p_lvl7 () NONBANKED
+///Ablauf Raum 7
+void p_lvl7 (void) __nonbanked
 {
-  if ((v_sxk == 72) && (v_syk == 24))
-  {
-    p_engine_changeLvl (8, l8);
-    p_player_setSprite (72, 24, 8, 1);
+        if ((v_sxk == 72) && (v_syk == 24)) {
+                p_engine_changeLvl (8, l8);
+                p_player_setSprite (72, 24, 8, 1);
 
-    v_mg = 1; v_gspeed = 15;
-    p_gegner_set (1, 4, 4, 72, 96, MOVE_VERTICAL, MOVE_NORTH, 125, 2);
-  }
+                v_mg = 1; v_gspeed = 20;
+                p_gegner_set (1, 4, 4, 72, 96, MOVE_VERTICAL, MOVE_NORTH, 125, 2);
+        }
 }
 
-void p_lvl8 () NONBANKED
+///Ablauf Raum 8
+void p_lvl8 (void) __nonbanked
 {
-  if ((v_sxk == 16) && (v_syk == 96))
-  {
-    p_engine_changeLvl (9, l9);
-    p_player_setSprite (16, 96, 1, 10);
+        if ((v_sxk == 16) && (v_syk == 96)) {
+                p_engine_changeLvl (9, l9);
+                p_player_setSprite (16, 96, 1, 10);
 
-    v_mg = 2; v_gspeed = 25;
-    p_gegner_set (1, 4, 4, 24, 48, MOVE_VERTICAL, MOVE_SOUTH, 125, 2);
-     p_gegner_set (2, 6, 5, 144, 56, MOVE_STACHEL, MOVE_UP, 125, 2);
-  }
+                v_mg = 2; v_gspeed = 35;
+                p_gegner_set (1, 4, 4, 24, 48, MOVE_VERTICAL, MOVE_SOUTH, 125, 2);
+                p_gegner_set (2, 6, 5, 144, 56, MOVE_STACHEL, MOVE_UP, 125, 2);
+        }
 }
 
-void p_lvl9 () NONBANKED
+//Ablauf Raum 9
+void p_lvl9 (void) __nonbanked
 {
-  if ((v_sxk == 152) && (v_syk == 56))
-  {
-    p_engine_changeLvl (10, l10);
-    p_player_setSprite (152, 56, 18, 5);
-  }
+        if ((v_sxk == 152) && (v_syk == 56)) {
+                p_engine_changeLvl (10, l10);
+                p_player_setSprite (152, 56, 18, 5);
+        }
 }

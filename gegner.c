@@ -1,6 +1,6 @@
 //   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -25,9 +25,9 @@
 #include "hud.h"
 
 ///horizontale Bewegungsroutine Gegner
-void p_gegner_move_horizontal () BANKED
+void p_gegner_move_horizontal (void) __banked
 {
-  for (v_i = 1; v_i <= v_mg; v_i++) 
+  for (v_i = 1; v_i <= v_mg; ++v_i) 
   {
     if (v_gflag [v_i] == 1) 
     {
@@ -72,7 +72,7 @@ void p_gegner_move_horizontal () BANKED
 }
 
 ///Gegner die sich vertikal bewegen
-void p_gegner_move_vertikal () BANKED
+void p_gegner_move_vertikal (void) __banked
 {
   for (v_i = 1; v_i <= v_mg; v_i++) 
   {
@@ -118,7 +118,7 @@ void p_gegner_move_vertikal () BANKED
   }
 }
 
-void p_gegner_stop () BANKED
+void p_gegner_stop (void) __banked
 {
   v_kampf = FALSE;
   
@@ -134,7 +134,7 @@ void p_gegner_stop () BANKED
 }
 
 ///Kolision mit Spieler
-void p_gegner_kolision () BANKED
+void p_gegner_kolision (void) __banked
 {
   for (v_j = 1; v_j <= v_mg; v_j++)
   {
@@ -274,30 +274,30 @@ void p_gegner_kolision () BANKED
 
 //Setz Gegner (Nr, 1. Tile, 2. Tile, XK, YK, Flag, Richtung, LP, TP)
 void p_gegner_set (UINT8 v_sprinr, UINT8 v_sprftile, UINT8 v_sprltile, UINT8 v_sprx, UINT8 v_spry, 
-                   UINT8 v_sprflag, UINT8 v_sprri, UINT8 v_sprlp, UINT8 v_sprtp) BANKED
+                   UINT8 v_sprflag, UINT8 v_sprri, UINT8 v_sprlp, UINT8 v_sprtp) __banked
 {
-  v_gtp [v_sprinr] = v_sprtp; v_glp [v_sprinr] = v_sprlp; v_gxk [v_sprinr] = v_sprx; 
-  v_gyk [v_sprinr] = v_spry; v_gflag [v_sprinr] = v_sprflag; v_gri [v_sprinr] = v_sprri;
-  v_gftile [v_sprinr] = v_sprftile; v_gltile [v_sprinr] = v_sprltile;
-  
-  v_kampf = TRUE;
-  
-  v_gegnerlooptime = v_gspeed - 1;
-  
-  if (v_sprri == 1) set_sprite_tile  (9 + v_sprinr, v_gftile [v_sprinr]);
-  if (v_sprri == 2) set_sprite_tile  (9 + v_sprinr, v_gltile [v_sprinr]);
-  if (v_sprri == 3) set_sprite_tile  (9 + v_sprinr, v_gftile [v_sprinr]);
-  if (v_sprri == 4) set_sprite_tile  (9 + v_sprinr, v_gltile [v_sprinr]);
-  if (v_sprri == 5) set_sprite_tile  (9 + v_sprinr, v_gftile [v_sprinr]);
-  if (v_sprri == 6) set_sprite_tile  (9 + v_sprinr, v_gltile [v_sprinr]);
+          v_gtp [v_sprinr] = v_sprtp; v_glp [v_sprinr] = v_sprlp; v_gxk [v_sprinr] = v_sprx; 
+          v_gyk [v_sprinr] = v_spry; v_gflag [v_sprinr] = v_sprflag; v_gri [v_sprinr] = v_sprri;
+          v_gftile [v_sprinr] = v_sprftile; v_gltile [v_sprinr] = v_sprltile;
+          
+          v_kampf = TRUE;
+          
+          v_gegnerlooptime = v_gspeed - 1;
+          
+          if (v_sprri == 1) set_sprite_tile  (9 + v_sprinr, v_gftile [v_sprinr]);
+          if (v_sprri == 2) set_sprite_tile  (9 + v_sprinr, v_gltile [v_sprinr]);
+          if (v_sprri == 3) set_sprite_tile  (9 + v_sprinr, v_gftile [v_sprinr]);
+          if (v_sprri == 4) set_sprite_tile  (9 + v_sprinr, v_gltile [v_sprinr]);
+          if (v_sprri == 5) set_sprite_tile  (9 + v_sprinr, v_gftile [v_sprinr]);
+          if (v_sprri == 6) set_sprite_tile  (9 + v_sprinr, v_gltile [v_sprinr]);
 
-  move_sprite (9 + v_sprinr, v_gxk [v_sprinr], v_gyk [v_sprinr]);
+          move_sprite (9 + v_sprinr, v_gxk [v_sprinr], v_gyk [v_sprinr]);
 }
 
 ///Stachelbewegung Gegner
-void p_gegner_stachel () BANKED
+void p_gegner_stachel (void) __banked
 {
-  for (v_i = 1; v_i <= v_mg; v_i++) 
+  for (v_i = 1; v_i <= v_mg; ++v_i) 
   {
     if (v_gflag [v_i] == 3)
     {

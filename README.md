@@ -7,3 +7,5 @@ The player controls a dwarf who suspects a precious gem in a small mine. Unfortu
 so there is little time to find the stone. In addition, some small dangers lurk in the mine and the pimple takes advantage.
 
 All made by Magister (projekte@kabelmail.net)
+
+Updated in 2021

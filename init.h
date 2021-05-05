@@ -1,6 +1,6 @@
-//   Graber
+//   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -23,7 +23,7 @@
 
 #include "globals.h"
 
-void p_init () NONBANKED;
-void p_init2 () NONBANKED;
+void p_init (void) __nonbanked;
+void p_init2 (void) __nonbanked;
 
 #endif

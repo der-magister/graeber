@@ -1,6 +1,6 @@
-//   Graber
+//   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -23,7 +23,7 @@
 
 #include "globals.h"
 
-void p_engine_drawMap (unsigned char *lvldat) NONBANKED;
-void p_engine_changeLvl (UINT8 lvl, unsigned char *lvldat) NONBANKED;
+void p_engine_drawMap (unsigned char lvldat [240]) __nonbanked;
+void p_engine_changeLvl (UINT8 lvl, unsigned char lvldat [240]) __nonbanked;
 
 #endif

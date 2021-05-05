@@ -1,4 +1,4 @@
-//   Graber
+//   Graeber
 //
 //   Copyright (C) 2018 Heiko Wolf
 //
@@ -23,12 +23,12 @@
 
 #include "globals.h"
 
-void p_player_init () BANKED;
+void p_player_init (void) __banked;
 void p_player_setSprite (UINT8 xk, UINT8 yk, UINT8 v_mxk, UINT8 v_myk) BANKED;
-void p_player_moveNorth () BANKED;
-void p_player_moveSouth () BANKED;
-void p_player_moveWest () BANKED;
-void p_player_moveEast () BANKED;
-void p_player_angriff () BANKED;
+void p_player_moveNorth (void) __banked;
+void p_player_moveSouth (void) __banked;
+void p_player_moveWest (void) __banked;
+void p_player_moveEast (void) __banked;
+void p_player_schlag (void) __banked;
 
 #endif

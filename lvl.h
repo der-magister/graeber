@@ -1,6 +1,6 @@
-//   Graber
+//   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -23,14 +23,14 @@
 #ifndef _LVL_H_
 #define _LVL_H_
 
-void p_lvl1 () NONBANKED;
-void p_lvl2 () NONBANKED;
-void p_lvl3 () NONBANKED;
-void p_lvl4 () NONBANKED;
-void p_lvl5 () NONBANKED;
-void p_lvl6 () NONBANKED;
-void p_lvl7 () NONBANKED;
-void p_lvl8 () NONBANKED;
-void p_lvl9 () NONBANKED;
+void p_lvl1 (void) __nonbanked;
+void p_lvl2 (void) __nonbanked;
+void p_lvl3 (void) __nonbanked;
+void p_lvl4 (void) __nonbanked;
+void p_lvl5 (void) __nonbanked;
+void p_lvl6 (void) __nonbanked;
+void p_lvl7 (void) __nonbanked;
+void p_lvl8 (void) __nonbanked;
+void p_lvl9 (void) __nonbanked;
 
 #endif

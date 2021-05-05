@@ -1,4 +1,4 @@
-//   Graber
+//   Graeber
 //
 //   Copyright (C) 2018 Heiko Wolf
 //
@@ -16,9 +16,9 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@skywave-2000.de
+//   Kontakt: projekte@kabelmail.net
 
-const unsigned char win[] =
+const unsigned char win[360] =
 {
   0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,
   0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,

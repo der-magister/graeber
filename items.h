@@ -1,4 +1,4 @@
-//   Graber
+//   Graeber
 //
 //   Copyright (C) 2018 Heiko Wolf
 //
@@ -27,5 +27,6 @@ void p_items_sammleGold () BANKED;
 void p_items_sammleHerz () BANKED;
 void p_items_sammlePickel () BANKED;
 void p_item_sammleEdelstein () BANKED;
+void p_item (void) __banked;
 
 #endif

@@ -1,6 +1,6 @@
 //   Graber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -113,7 +113,7 @@ extern UINT8 v_gltile [6];
 extern UINT8 v_trefferlooptime;
 extern UINT8 v_gegnerlooptime;
 extern UINT8 v_kampf;
-extern volatile UINT8 v_j;
+extern UINT8 v_j;
 extern UINT8 v_mg;             //maximale Gegner
 extern UINT8 v_stref;
 extern UINT8 v_gspeed;

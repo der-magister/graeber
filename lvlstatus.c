@@ -1,6 +1,6 @@
-//   Graber
+//   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -21,16 +21,16 @@
 #include "lvlstatus.h"
 #include "lvl.h"
 
-void p_lvl_whichLvL () NONBANKED
+void p_lvl_whichLvL (void) __nonbanked
 {
-  if (v_lvl == 1) p_lvl1 ();
-  else if (v_lvl == 2) p_lvl2 ();
-  else if (v_lvl == 3) p_lvl3 ();
-  else if (v_lvl == 4) p_lvl4 ();
-  else if (v_lvl == 5) p_lvl5 ();
-  else if (v_lvl == 6) p_lvl6 ();
-  else if (v_lvl == 7) p_lvl7 ();
-  else if (v_lvl == 8) p_lvl8 ();
-  else if (v_lvl == 9) p_lvl9 ();
-  //else if (v_lvl == 10) p_lvl10 ();
+        if (v_lvl == 1) p_lvl1 ();
+        else if (v_lvl == 2) p_lvl2 ();
+        else if (v_lvl == 3) p_lvl3 ();
+        else if (v_lvl == 4) p_lvl4 ();
+        else if (v_lvl == 5) p_lvl5 ();
+        else if (v_lvl == 6) p_lvl6 ();
+        else if (v_lvl == 7) p_lvl7 ();
+        else if (v_lvl == 8) p_lvl8 ();
+        else if (v_lvl == 9) p_lvl9 ();
+        //else if (v_lvl == 10) p_lvl10 ();
 }

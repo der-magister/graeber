@@ -1,6 +1,6 @@
-//   Graber
+//   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -26,36 +26,35 @@
 
 #include "daten/gfx/sprites.h"
 #include "daten/gfx/tiles.h"
-#include "daten/lvldaten/l1.h"
-#include "daten/intro-3.h"
+#include "daten/lvldaten/lvldat.h"
+#include "daten/introdat.h"
 
-void p_init () NONBANKED
+void p_init (void) __nonbanked
 {
-  HIDE_SPRITES;
-  HIDE_BKG;
-  HIDE_WIN;
-  SPRITES_8x8;
-  set_sprite_data (0, 7, sprites);
-  set_bkg_data (0, 54, tiles);
+        HIDE_SPRITES;
+        HIDE_BKG;
+        HIDE_WIN;
+        SPRITES_8x8;
+        set_sprite_data (0, 7, sprites);
+        set_bkg_data (0, 54, tiles);
 }
 
-void p_init2 () NONBANKED
+void p_init2 (void) __nonbanked
 {
-  SHOW_SPRITES;
-  SHOW_BKG;
+        SHOW_SPRITES;
+        SHOW_BKG;
 
-  set_bkg_tiles (0, 0, 20, 18, intro3);
-  waitpad (J_START);
+        set_bkg_tiles (0, 0, 20, 18, intro3);
+        waitpad (J_START);
 
+        v_timer = 150; v_lvl = 1; v_sangriff = FALSE; v_aktion = FALSE;
 
-  v_timer = 150; v_lvl = 1;
+        p_player_init ();
+        p_hud_init ();
 
-  p_player_init ();
-  p_hud_init ();
+        p_engine_drawMap (l1);
 
-  p_engine_drawMap (l1);
-
-  p_player_setSprite (16, 64, 1, 6);
-  v_mg = 1; v_gspeed = 40;
-  p_gegner_set (1, 2, 3, 136, 64, MOVE_HORIZONT, MOVE_WEST, 1, 1);
+        p_player_setSprite (16, 64, 1, 6);
+        v_mg = 1; v_gspeed = 40;
+        p_gegner_set (1, 2, 3, 136, 64, MOVE_HORIZONT, MOVE_WEST, 1, 1);
 }

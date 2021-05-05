@@ -1,6 +1,6 @@
-//   Graber
+//   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -20,16 +20,15 @@
 
 #include "intro.h"
 
-#include "daten/intro-1.h"
-#include "daten/intro-2.h"
+#include "daten/introdat.h"
 
-void p_intro () NONBANKED
+void p_intro (void) __nonbanked
 {
-  SHOW_SPRITES;
-  SHOW_BKG;
+	  SHOW_SPRITES;
+	  SHOW_BKG;
 
-  set_bkg_tiles (0, 0, 20, 18, intro1);
-  delay (2500);
-  set_bkg_tiles (0, 0, 20, 18, intro2);
-  delay (2500);
+	  set_bkg_tiles (0, 0, 20, 18, intro1);
+	  //delay (2500);
+	  //set_bkg_tiles (0, 0, 20, 18, intro2);
+	  delay (2500);
 }

@@ -1,6 +1,6 @@
 //   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -23,12 +23,12 @@
 
 #include "globals.h"
 
-void p_gegner_move_horizontal () BANKED;
-void p_gegner_move_vertikal () BANKED;
-void p_gegner_stop () BANKED;
-void p_gegner_kolision () BANKED;
-void p_gegner_stachel () BANKED;
+void p_gegner_move_horizontal (void) __banked;
+void p_gegner_move_vertikal (void) __banked;
+void p_gegner_stop (void) BANKED;
+void p_gegner_kolision (void) __banked;
+void p_gegner_stachel (void) __banked;
 void p_gegner_set (UINT8 v_sprinr, UINT8 v_sprftile, UINT8 v_sprltile, UINT8 v_sprx, UINT8 v_spry, 
-                   UINT8 v_sprflag, UINT8 v_sprri, UINT8 v_sprlp, UINT8 v_sprtp) BANKED;
+                   UINT8 v_sprflag, UINT8 v_sprri, UINT8 v_sprlp, UINT8 v_sprtp) __banked;
                    
 #endif

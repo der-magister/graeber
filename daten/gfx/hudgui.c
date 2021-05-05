@@ -1,6 +1,6 @@
-//   Graber
+//   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -16,11 +16,9 @@
 //   With this program; if not, write to the Free Software Foundation, Inc.,
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-//   Kontakt: magister@skywave-2000.de
+//   Kontakt: projekte@kabelmail.net
 
-//#pragma bank=1
-
-const unsigned char hudgui[] =
+const unsigned char hudgui[120] =
 {
   0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,
   0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,0x32,

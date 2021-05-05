@@ -1,4 +1,4 @@
-//   Graber
+//   Graeber
 //
 //   Copyright (C) 2018 Heiko Wolf
 //
@@ -22,46 +22,57 @@
 
 #include "items.h"
 
-void p_items_sammleGold () BANKED
+///Gold einsammeln
+void p_items_sammleGold (void) __banked
 { 
-  if ((v_lvldat [v_smk] == 5) && (v_sgo < v_smgo))
-  {
-    v_sgo++;
-    v_lvldat [v_smk] = 1;
-    v_tile [0] = 1;
-    set_bkg_tiles (v_smxk, v_smyk, 1, 1, v_tile);
-  }
+        if ((v_lvldat [v_smk] == 5) && (v_sgo != v_smgo))
+        {
+                ++v_sgo;
+                v_lvldat [v_smk] = 1;
+                v_tile [0] = 1;
+                
+                set_bkg_tiles (v_smxk, v_smyk, 1, 1, v_tile);
+        }
 }
 
-void p_items_sammleHerz () BANKED
+//Herz einsammeln
+void p_items_sammleHerz (void) __banked
 {
-  if ((v_lvldat [v_smk] == 20) && (v_slp < v_smlp))
-  {
-    v_slp++;
-    v_lvldat [v_smk] = 1;
-    v_tile [0] = 1;
-    set_bkg_tiles (v_smxk, v_smyk, 1, 1, v_tile);
-  }
+        if ((v_lvldat [v_smk] == 20) && (v_slp != v_smlp)) {
+                ++v_slp;
+                v_lvldat [v_smk] = 1;
+                v_tile [0] = 1;
+                set_bkg_tiles (v_smxk, v_smyk, 1, 1, v_tile);
+        }
 }
 
-void p_items_sammlePickel () BANKED
+//Haltbarkeit des Pickels erhöhen
+void p_items_sammlePickel (void) __banked
 {
-  if ((v_lvldat [v_smk] == 21) && (v_shalt < v_smhalt))
-  {
-    v_shalt++;
-    v_lvldat [v_smk] = 1;
-    v_tile [0] = 1;
-    set_bkg_tiles (v_smxk, v_smyk, 1, 1, v_tile);
-  }
+        if ((v_lvldat [v_smk] == 21) && (v_shalt != v_smhalt)) {
+                ++v_shalt;
+                v_lvldat [v_smk] = 1;
+                v_tile [0] = 1;
+                set_bkg_tiles (v_smxk, v_smyk, 1, 1, v_tile);
+        }
 }
 
-void p_item_sammleEdelstein () BANKED
+//Delestein einsammeln
+void p_item_sammleEdelstein (void) __banked 
 {
-  if ((v_lvldat [v_smk] == 52) && (v_lvl == 10))
-  {
-    v_lvldat [v_smk] = 1;
-    v_tile [0] = 1;
-    set_bkg_tiles (v_smxk, v_smyk, 1, 1, v_tile);
-    v_edelstein = 1;
-  }
+        if ((v_lvldat [v_smk] == 52) && (v_lvl == 10)) {
+                v_lvldat [v_smk] = 1;
+                v_tile [0] = 1;
+                set_bkg_tiles (v_smxk, v_smyk, 1, 1, v_tile);
+                v_edelstein = 1;
+        }
 }
+
+
+void p_item (void) __banked
+{
+        p_items_sammleGold ();
+        p_items_sammleHerz ();
+        p_items_sammlePickel ();
+        p_item_sammleEdelstein ();
+} 

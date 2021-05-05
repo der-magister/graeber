@@ -6,4 +6,6 @@ graeber.gb
 *.sym
 *.map
 *.swp
+*.ihx
+*.noi
 
