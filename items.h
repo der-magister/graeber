@@ -1,6 +1,6 @@
 //   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -23,10 +23,10 @@
 
 #include "globals.h"
 
-void p_items_sammleGold () BANKED;
-void p_items_sammleHerz () BANKED;
-void p_items_sammlePickel () BANKED;
-void p_item_sammleEdelstein () BANKED;
+void p_items_sammleGold (void) __banked;
+void p_items_sammleHerz (void) __banked;
+void p_items_sammlePickel (void) __banked;
+void p_item_sammleEdelstein (void) __banked;
 void p_item (void) __banked;
 
 #endif

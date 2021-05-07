@@ -1,6 +1,6 @@
 //   Graeber
 //
-//   Copyright (C) 2018 Heiko Wolf
+//   Copyright (C) 2018-2021 Heiko Wolf
 //
 //   This program is free software; you can redistribute it and/or modify
 //   it under the terms of the GNU General Public License As published by
@@ -17,8 +17,6 @@
 //   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 //   Kontakt: projekte@kabelmail.net
-
-//#pragma bank=1
 
 #include "items.h"
 
